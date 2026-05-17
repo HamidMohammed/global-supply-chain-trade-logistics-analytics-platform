@@ -26,7 +26,7 @@ The Executive Overview dashboard provides centralized operational visibility acr
 
 # Dimensional Warehouse Model
 
-![Star Schema](docs/reports/screenshots/powerbi/dim_modeling.png)
+![Star Schema](docs/reports/screenshots/powerbi/dim_modeling.PNG)
 
 The dimensional warehouse follows Kimball modeling principles using:
 - conformed dimensions,
