@@ -13,7 +13,7 @@ An end-to-end analytics engineering and business intelligence platform designed 
 
 # Dashboard Preview
 
-![Executive Dashboard](docs/reports/1.png)
+![Executive Dashboard](docs/reports/screenshots/1.png)
 
 The Executive Overview dashboard provides centralized operational visibility across:
 - freight market volatility,
