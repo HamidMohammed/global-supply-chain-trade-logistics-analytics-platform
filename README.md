@@ -4,6 +4,64 @@ An end-to-end analytics engineering and business intelligence platform designed 
 
 ---
 
+# Global Supply Chain & Trade Disruption Analytics Platform
+
+![Python](https://img.shields.io/badge/Python-Data%20Engineering-blue)
+![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-yellow)
+![Talend](https://img.shields.io/badge/Talend-ETL-orange)
+![Kimball](https://img.shields.io/badge/DataWarehouse-Kimball-green)
+
+# Dashboard Preview
+
+![Executive Dashboard](screenshots/dashboard/executive_overview.png)
+
+The Executive Overview dashboard provides centralized operational visibility across:
+- freight market volatility,
+- supply chain pressure,
+- port congestion,
+- trade activity,
+- and industry vulnerability.
+
+---
+
+# Dimensional Warehouse Model
+
+![Star Schema](screenshots/model/star_schema.png)
+
+The dimensional warehouse follows Kimball modeling principles using:
+- conformed dimensions,
+- surrogate keys,
+- star schema architecture,
+- and centralized semantic KPI modeling.
+
+---
+
+# Talend ETL Workflow
+
+![Talend Workflow](screenshots/etl/talend_workflow.png)
+
+Talend ETL pipelines were implemented for:
+- dimensional loading,
+- surrogate key generation,
+- business enrichment,
+- and warehouse integration.
+
+---
+
+# Exploratory Data Analysis
+
+![EDA Freight Trend](screenshots/eda/freight_trend.png)
+
+EDA was performed to:
+- analyze freight volatility,
+- identify congestion patterns,
+- detect operational anomalies,
+- and validate analytical trends across disruption periods.
+
+---
+
+An end-to-end analytics engineering and business intelligence platform designed to analyze global supply chain disruptions...
+
 # Project Overview
 
 This project implements a complete analytics engineering workflow for global supply chain intelligence.
