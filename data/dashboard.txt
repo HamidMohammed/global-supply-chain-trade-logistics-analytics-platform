@@ -1,0 +1,206 @@
+PHASE 1 — OPEN POWER BI & IMPORT DATA
+Step 1 — Open Power BI Desktop
+
+Open the Microsoft Power BI Desktop app.
+
+Close any welcome pop-ups so you see a blank white canvas.
+
+Familiarize yourself with the 3 main areas:
+
+Left Sidebar: Report View (Canvas), Table View (Grid), Model View (Network).
+
+Top Ribbon: Home, Insert, Modeling, View.
+
+Right Panes: Data (your tables), Visualizations (your charts), Filters.
+
+Step 2 — Import Your CSV Files
+
+On the Top Ribbon, click Home → Get Data → Text/CSV.
+
+Find your folder and double-click fact_freight_market.csv.
+
+A yellow preview window opens. Click Load at the bottom.
+
+Repeat this exact click process for these 8 files:
+
+fact_port_logistics.csv
+
+fact_trade_volume.csv
+
+fact_industry_exposure.csv
+
+dim_date.csv
+
+dim_geography.csv
+
+dim_industry.csv
+
+dim_trade_category.csv
+
+dim_disruption_era.csv
+
+Step 3 — The Role-Playing Geography Fix (Crucial)
+Because Trade has both an Exporter and Importer, we must load Trade Geography twice!
+
+Click Get Data → Text/CSV. Load dim_trade_geography.csv.
+
+Click Get Data → Text/CSV AGAIN. Load dim_trade_geography.csv a second time!
+
+Look at the Data Pane on the far right.
+
+Right-click dim_trade_geography → click Rename → type Dim_Exporter.
+
+Right-click the second one → click Rename → type Dim_Importer.
+
+PHASE 2 — BUILD STAR SCHEMA RELATIONSHIPS
+Step 4 — Open Model View
+
+On the far-left gray sidebar, click the Model View icon (looks like 3 connected boxes).
+
+You will see all your tables. Drag the 4 fact_ tables to the bottom, and the dim_ tables to the top.
+
+Step 5 — Connect the Tables (Drag and Drop)
+To connect, click a word in a Dim table, hold your mouse down, drag it to the matching word in the Fact table, and let go.
+
+Dates: Drag date_key from dim_date to date_sk in Freight Market. Drag date_key to date_key in the other 3 fact tables.
+
+Eras: Drag era_sk from dim_disruption_era to era_sk in all 4 fact tables.
+
+Ports: Drag geo_sk from dim_geography to geo_sk in Port Logistics.
+
+Industries: Drag industry_sk from dim_industry to industry_sk in Industry Exposure.
+
+Trade Categories: Drag trade_category_sk from dim_trade_category to trade_category_sk in Trade Volume.
+
+The Exporter/Importer: Drag trade_geo_sk from Dim_Exporter to exporter_geo_sk in Trade Volume. Then drag trade_geo_sk from Dim_Importer to importer_geo_sk in Trade Volume.
+
+PHASE 3 & 4 — CREATE THE MEASURES TABLE & DAX
+Step 6 — Create Empty Measures Table
+
+Click the Report View icon (top-left) to return to your blank canvas.
+
+Top Ribbon: click Home → Enter Data.
+
+A popup appears. At the very bottom, in the "Name" box, type _Measures. Click Load.
+
+Right-click the Column1 inside _Measures on the right side, and select Hide in report view.
+
+Step 7 — Create the DAX Measures
+
+Right-click _Measures in the Data Pane → select New Measure.
+
+A formula bar appears at the top. Delete what is there, paste the code below, and press Enter.
+
+Repeat for all 8 measures:
+
+Code snippet
+Total Trade Volume = SUM(fact_trade_volume[trade_value_bn_usd])
+Code snippet
+Avg Container Rate = AVERAGE(fact_freight_market[container_rate_usd_40ft])
+(CRITICAL FIX: Power BI cannot average text like "Busy". We use Wait Days instead for Congestion)
+
+Code snippet
+Avg Wait Days = AVERAGE(fact_port_logistics[avg_wait_days])
+Code snippet
+Avg Vulnerability = AVERAGE(fact_industry_exposure[overall_vulnerability])
+Code snippet
+Avg Resilience = AVERAGE(fact_industry_exposure[resilience_score])
+Code snippet
+Trade Growth % = AVERAGE(fact_trade_volume[yoy_growth_pct])
+Code snippet
+Global Pressure Index = AVERAGE(fact_freight_market[supply_chain_pressure_index])
+Code snippet
+On-Time Delivery % = AVERAGE(fact_freight_market[on_time_delivery_pct])
+PHASE 5 — BUILD PAGE 1 (EXECUTIVE OVERVIEW)
+Step 8 — Set up the Page
+
+Look at the bottom left tab. Double-click "Page 1" and rename it Executive Overview.
+
+Click empty white space. Click the Format your report page icon (the Paintbrush in the Visualizations pane) → Canvas Background → change color to Dark Navy.
+
+Step 9 — The KPI Cards
+
+Click the Card icon ("123") in the Visualizations pane.
+
+Drag Avg Container Rate from _Measures into the "Fields" box.
+
+Click the Paintbrush → General → Effects → Turn Background ON, Shadow ON, Visual border ON (Rounded corners: 10px).
+
+Copy and Paste this card 4 times. Swap the field to show: Global Pressure Index, Avg Wait Days, Total Trade Volume, and Avg Vulnerability. Line them up across the top.
+
+Step 10 — The Hero Chart (Freight Trend)
+
+Click empty canvas. Click the Line chart icon. Make it large.
+
+Drag date (from dim_date) to X-axis.
+
+Drag Avg Container Rate to Y-axis.
+
+Drag era_name (from dim_disruption_era) to Legend.
+
+Step 11 — The Slicers (Interactive Filters)
+
+Click the Slicer icon (funnel with a table).
+
+Drag year (from dim_date) to the Field box.
+
+Click the Paintbrush → Slicer Settings → Style → Dropdown. Place it on the far left.
+
+PHASE 6 — BUILD PAGE 2 (FREIGHT MARKET)
+Click the + at the bottom to make a new page. Rename it Freight Market Intelligence.
+
+Freight Volatility (Line Chart): X-axis = date. Y-axis = Avg Container Rate. Secondary Y-axis = baltic_dry_index (Average).
+
+Delivery Performance (Gauge): Click the Gauge icon. Value = On-Time Delivery %.
+
+Freight Inflation (Clustered Column): X-axis = era_name. Y-axis = container_yoy_pct (Average).
+
+PHASE 7 — BUILD PAGE 3 (PORT OPERATIONS)
+Click the + at the bottom. Rename it Port & Logistics Operations.
+
+Vessel Backlog (Scatter Plot): Click Scatter Chart. X-axis = Avg Wait Days. Y-axis = vessels_anchor (Average). Values = port (from dim_geography). This creates an amazing bubble chart.
+
+Congestion by Port (Bar Chart): Click Clustered Bar Chart. Y-axis = port. X-axis = Avg Wait Days.
+
+Regional Heatmap (Matrix): Click Matrix. Rows = region. Columns = month_name. Values = Avg Wait Days. Click the arrow next to the value in the build pane → Conditional Formatting → Background Color.
+
+PHASE 8 — BUILD PAGE 4 (TRADE & GEOPOLITICS)
+Click the + at the bottom. Rename it Trade Flow & Risk Analytics.
+
+Trade Trend (Line Chart): X-axis = year. Y-axis = Total Trade Volume.
+
+Concentration Risk (Treemap): Click Treemap icon. Category = trade_category. Values = concentration_risk (Average).
+
+Trade Relationships (Stacked Bar Chart): Y-axis = country (from Dim_Exporter). X-axis = Total Trade Volume. Legend = country (from Dim_Importer).
+
+PHASE 9 — BUILD PAGE 5 (INDUSTRY RISK)
+Click the + at the bottom. Rename it Industry Risk & Resilience.
+
+Vulnerability Ranking (Bar Chart): Y-axis = industry_name. X-axis = Avg Vulnerability.
+
+Resilience Matrix (Scatter Plot): X-axis = resilience_score (Average). Y-axis = geopolitical_exposure (Average). Values = industry_name. Size = Avg Vulnerability.
+
+Vulnerability Breakdown (Donut Chart): Legend = vulnerability_band. Values = industry_sk (Count).
+
+PHASE 10 & 11 — FINAL PROFESSIONAL TOUCHES
+Step 12 — Apply Global Theme
+
+Go to Top Ribbon: Click View → Themes (the dropdown box with colors).
+
+Select Executive or Innovate. It will instantly color coordinate your entire dashboard.
+
+Step 13 — Add Navigation Buttons
+
+Top Ribbon: Click Insert → Buttons → Blank.
+
+Place it at the top left. Click the Paintbrush → Button text → Turn ON and type "Ports".
+
+Click Action → Turn ON. Set Type to Page Navigation. Set Destination to Port & Logistics Operations.
+
+Copy/paste to make a menu for all 5 pages.
+
+Step 14 — Hide Technical Columns
+
+Look at your Data Pane on the right.
+
+Right-click any column ending in _sk (like geo_sk, date_sk) and select Hide in report view. This hides the backend IDs from the business users, keeping your fields list perfectly clean.

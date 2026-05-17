@@ -1,0 +1,48 @@
+trade_category_sk,trade_category,key_goods,market_type,volatility_profile,strategic_importance
+1,commodities,"iron ore,coal,LNG",Commodity,Volatile,Critical
+2,textiles,"garments,knitwear",General,Stable,Standard
+3,commodities,"soybeans,iron ore,beef",Commodity,Stable,Standard
+4,integrated,"energy,vehicles,food,lumber",General,Stable,Standard
+5,commodities,"copper,lithium,fruit",Commodity,Stable,Standard
+6,manufacturing,"electronics,machinery,chemicals",Manufacturing,Cyclical,Critical
+7,manufacturing,"electronics,machinery,vehicles",Manufacturing,Cyclical,Critical
+8,manufacturing,"electronics,semiconductors",Manufacturing,Cyclical,Critical
+9,manufacturing,"electronics,machinery,textiles",Manufacturing,Cyclical,Critical
+10,energy_goods,"oil,coffee,coal",Energy,Volatile,Critical
+11,services_goods,"aircraft,pharma,chemicals",General,Stable,Standard
+12,energy_goods,"LNG,petroleum,textiles",Energy,Volatile,Critical
+13,luxury_goods,"aerospace,luxury,agriculture",General,Stable,Standard
+14,manufacturing,"vehicles,machinery,chemicals",Manufacturing,Stable,Standard
+15,mixed,"electronics,machinery,chemicals",General,Cyclical,Critical
+16,IT_goods,"pharma,textiles,chemicals",General,Stable,Standard
+17,commodities,"coal,palm oil,nickel",Commodity,Volatile,Critical
+18,energy,"LNG,coal,minerals",Energy,Volatile,Critical
+19,high_tech,"semiconductors,pharma,defense",General,Stable,Critical
+20,manufacturing,"vehicles,electronics,machinery",Manufacturing,Cyclical,Critical
+21,manufacturing,"electronics,palm oil",Manufacturing,Volatile,Critical
+22,integrated,"vehicles,energy,machinery",General,Stable,Standard
+23,manufacturing,"vehicles,electronics,food",Manufacturing,Cyclical,Critical
+24,manufacturing,"vehicles,textiles,phosphates",Manufacturing,Stable,Standard
+25,trade_hub,"electronics,machinery",General,Cyclical,Critical
+26,commodities,"crude oil,minerals",Commodity,Volatile,Critical
+27,textiles,"garments,textiles",General,Stable,Standard
+28,commodities,"copper,zinc,gold",Commodity,Stable,Standard
+29,electronics,"semiconductors,electronics",General,Cyclical,Critical
+30,manufacturing,"vehicles,machinery,electronics",Manufacturing,Cyclical,Critical
+31,energy,"crude oil,petrochemicals",Energy,Volatile,Critical
+32,trade_hub,"electronics,chemicals,finance",General,Cyclical,Critical
+33,commodities,"minerals,coal,platinum",Commodity,Volatile,Standard
+34,manufacturing,"vehicles,electronics,steel",Manufacturing,Cyclical,Critical
+35,manufacturing,"vehicles,machinery,pharma",Manufacturing,Stable,Standard
+36,pharma_finance,"pharma,chemicals,machinery",General,Stable,Standard
+37,semiconductors,"chips,electronics,chemicals",General,Cyclical,Critical
+38,semiconductors,"chips,electronics",General,Cyclical,Critical
+39,manufacturing,"vehicles,textiles,machinery",Manufacturing,Stable,Standard
+40,trade,"gold,petroleum,machinery",General,Stable,Standard
+41,goods,"vehicles,pharma,food",General,Stable,Standard
+42,integrated,"vehicles,energy,food",General,Stable,Standard
+43,agriculture_energy,"soybeans,aircraft,semiconductors",Energy,Stable,Critical
+44,services_goods,"aircraft,machinery,pharma",General,Stable,Standard
+45,integrated,"vehicles,electronics,food",General,Cyclical,Critical
+46,manufacturing,"electronics,textiles,machinery",Manufacturing,Cyclical,Critical
+47,manufacturing,"electronics,textiles,footwear",Manufacturing,Cyclical,Critical

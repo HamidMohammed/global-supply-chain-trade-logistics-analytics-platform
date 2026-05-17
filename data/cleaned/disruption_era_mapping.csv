@@ -1,0 +1,6 @@
+era_name,start_year,end_year,defining_event,market_behavior,freight_environment,congestion_profile,trade_environment,supply_chain_state,disruption_intensity
+Normal,2000,2007,WTO globalization expansion,Stable,Low,Low,Expansion,Stable,Low
+GFC Shock,2008,2009,Global financial crisis,Shock,Extreme,Medium,Collapse,Disrupted,High
+Stagnation,2010,2019,Trade wars & slow recovery,Stable,Moderate,Moderate,Slow Growth,Recovering,Medium
+COVID Spike,2020,2022,Global pandemic disruption,Extreme Shock,Extreme,Extreme,Volatile,Critical,Extreme
+Normalization + Red Sea,2023,2024,Recovery & geopolitical rerouting,Recovery,Volatile,High,Unstable,Recovering,High
