@@ -456,7 +456,7 @@ Industry Vulnerability
 ---
 
 # Freight Market Intelligence
-![Freight Market](docs/reports/screenshots/powerbi/2.png)
+![Freight Market](docs/reports/screenshots/powerbi/3.PNG)
 
 ## Analytical Focus
 
@@ -474,7 +474,7 @@ This layer monitors logistics market instability and transportation reliability 
 
 # Port & Logistics Operations
 
-![Port & Logistics Operations ](docs/reports/screenshots/powerbi/3.png)
+![Port & Logistics Operations ](docs/reports/screenshots/powerbi/2.png)
 
 ## Analytical Focus
 
