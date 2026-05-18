@@ -456,7 +456,7 @@ Industry Vulnerability
 ---
 
 # Freight Market Intelligence
-![Freight Market](docs/reports/screenshots/powerbi/3.PNG)
+![Freight Market](docs/reports/screenshots/powerbi/freight.png)
 
 ## Analytical Focus
 
@@ -474,7 +474,7 @@ This layer monitors logistics market instability and transportation reliability 
 
 # Port & Logistics Operations
 
-![Port & Logistics Operations ](docs/reports/screenshots/powerbi/2.png)
+![Port & Logistics Operations ](docs/reports/screenshots/powerbi/port.png)
 
 ## Analytical Focus
 
@@ -491,7 +491,7 @@ This dashboard monitors maritime operational bottlenecks and logistics congestio
 ---
 
 # Trade Flow & Risk Analytics
-![Trade Flow & Risk Analytics ](docs/reports/screenshots/powerbi/4.png)
+![Trade Flow & Risk Analytics ](docs/reports/screenshots/powerbi/trade.png)
 
 ## Analytical Focus
 
@@ -508,7 +508,7 @@ This layer enables geopolitical trade analysis and monitors global trade depende
 ---
 
 # Industry Risk & Resilience
-![Industry Risk & Resilience ](docs/reports/screenshots/powerbi/5.png)
+![Industry Risk & Resilience ](docs/reports/screenshots/powerbi/industry.png)
 
 ## Analytical Focus
 
