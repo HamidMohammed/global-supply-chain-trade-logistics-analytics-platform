@@ -435,6 +435,7 @@ Industry Vulnerability
 ---
 
 # Executive Overview Dashboard
+![Executive Dashboard](docs/reports/screenshots/powerbi/1.png)
 
 ## Key KPIs
 
@@ -455,6 +456,7 @@ Industry Vulnerability
 ---
 
 # Freight Market Intelligence
+![Freight Market](docs/reports/screenshots/powerbi/2.png)
 
 ## Analytical Focus
 
@@ -472,6 +474,8 @@ This layer monitors logistics market instability and transportation reliability 
 
 # Port & Logistics Operations
 
+![Port & Logistics Operations ](docs/reports/screenshots/powerbi/3.png)
+
 ## Analytical Focus
 
 - vessel backlog analysis
@@ -487,6 +491,7 @@ This dashboard monitors maritime operational bottlenecks and logistics congestio
 ---
 
 # Trade Flow & Risk Analytics
+![Trade Flow & Risk Analytics ](docs/reports/screenshots/powerbi/4.png)
 
 ## Analytical Focus
 
@@ -503,6 +508,7 @@ This layer enables geopolitical trade analysis and monitors global trade depende
 ---
 
 # Industry Risk & Resilience
+![Industry Risk & Resilience ](docs/reports/screenshots/powerbi/5.png)
 
 ## Analytical Focus
 
