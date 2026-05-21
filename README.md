@@ -1,5 +1,7 @@
 # Global Supply Chain & Trade Disruption Analytics Platform
 
+![theme ](docs/reports/screenshots/powerbi/theme.PNG)
+
 An end-to-end analytics engineering and business intelligence platform designed to analyze global supply chain disruptions, freight market volatility, geopolitical trade exposure, and industry vulnerability using dimensional modeling, Python preprocessing, Talend ETL pipelines, and Power BI executive dashboards.
 
 ---
